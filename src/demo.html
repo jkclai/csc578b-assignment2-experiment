@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/demo.css">
+</head>
+<body>
+    <div id="canvas-container" class="canvas-container">
+        <svg id="canvas-svg" class="svg"></svg>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <button id="submit-button" style="width: 200px; display: none;">Next</button>
+    <div id="submit-text"></div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="./assets/scripts/constants.js"></script>
+    <script src="./assets/scripts/controller-cursor.js"></script>
+    <script src="./assets/scripts/controller-data.js"></script>
+    <script src="./assets/scripts/controller-time.js"></script>
+    <script src="./assets/scripts/controller-value.js"></script>
+    <script src="./assets/scripts/demo.js"></script>
+    
+    <script>
+        var canvas = d3.select("svg#canvas-svg")
+            .attr("width", CANVAS_WIDTH + "px")
+            .attr("height", CANVAS_HEIGHT + "px");
+
+        draw();
+    </script>
+</body>
+</html>
